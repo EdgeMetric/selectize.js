@@ -438,9 +438,9 @@ $.extend(Selectize.prototype, {
 				var pastedText = self.$control_input.val();
 				if(!pastedText.match(self.settings.splitOn)){ return }
                 
-                if(!self.settings.keepWhitesapces) {
-                    pastedText = $.trim(pastedText);
-                }
+				if(!self.settings.keepWhitesapces) {
+					pastedText = $.trim(pastedText);
+				}
 
 				var splitInput = pastedText.split(self.settings.splitOn);
 				for (var i = 0, n = splitInput.length; i < n; i++) {
@@ -1070,9 +1070,9 @@ $.extend(Selectize.prototype, {
 
 		var self              = this;
 		var query             = $.trim(self.$control_input.val());
-        if(!self.settings.keepWhitesapces){
-            query = $.trim(query);
-        }
+		if(!self.settings.keepWhitesapces){
+			query = $.trim(query);
+		}
 		var results           = self.search(query);
 		var $dropdown_content = self.$dropdown_content;
 		var active_before     = self.$activeOption && hash_key(self.$activeOption.attr('data-value'));
@@ -1595,10 +1595,10 @@ $.extend(Selectize.prototype, {
 		var self  = this;
 		var caret = self.caretPos;
         var value = self.$control_input.val() || '';
-        if(!self.settings.keepWhitesapces){
-            value = $.trim(value);
-        }
-        input = input || value;
+		if(!self.settings.keepWhitesapces){
+			value = $.trim(value);
+		}
+		input = input || value;
 
 		var callback = arguments[arguments.length - 1];
 		if (typeof callback !== 'function') callback = function() {};
