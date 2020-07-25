@@ -1560,7 +1560,7 @@
 			}
 	
 			var self              = this;
-			var query             = $.trim(self.$control_input.val());
+			var query             = self.$control_input.val();
 			if(!self.settings.keepWhitesapces){
 				query = $.trim(query);
 			}
